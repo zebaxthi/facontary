@@ -1,0 +1,22 @@
+.navbar {
+    padding-left: 4rem;
+    padding-right: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.logout {
+    margin-left: 2rem;
+}
+
+.logout:hover {
+    color: #5E81AC;
+}
+
+.nav-item {
+    margin: auto;
+}
+
+.icon {
+    margin-right: 2rem;
+}

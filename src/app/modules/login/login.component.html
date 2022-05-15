@@ -9,15 +9,37 @@
 
     <!-- Login Form -->
     <form>
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="usuario o correo">
-      <input type="password" id="password" class="fadeIn third" name="login" placeholder="contraseña">
-      <input type="submit" class="fadeIn fourth" value="Iniciar sessión">
+      <input
+        type="text"
+        id="login"
+        class="fadeIn second"
+        placeholder="usuario o correo"
+        [(ngModel)]="usuario"
+        name="usuario"
+        required="required"
+      />
+      <input
+        type="password"
+        id="password"
+        class="fadeIn third"
+        placeholder="contraseña"
+        [(ngModel)]="contrasena"
+        name="contrasena"
+        required="required"
+      />
+      <input
+        type="button"
+        id="button"
+        class="fadeIn fourth"
+        value="Iniciar sessión"
+        (click)="onLogin()"
+      />
     </form>
 
     <!-- Remind Passowrd -->
     <!-- <div id="formFooter">
       <a class="underlineHover" href="#">Se me olvidó la contraseña</a>
     </div> -->
-
   </div>
 </div>
+<p-toast position="bottom-center" key="bc"></p-toast>

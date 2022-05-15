@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand">
+      <img
+        src="../../../assets/facom.png"
+        alt=""
+        width="30"
+        height="24"
+        class="d-inline-block align-text-top"
+      />
+      Facontary
+    </a>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <i class="pi pi-calendar icon" style="font-size: 1.5rem"></i>
+      </li>
+      <li class="nav-item">
+        <i class="pi pi-inbox icon" style="font-size: 1.5rem"></i>
+      </li>
+      <li class="nav-item">
+        <i class="pi pi-bell icon" style="font-size: 1.5rem"></i>
+      </li>
+      <li class="nav-item">
+        <p-avatar
+          icon="pi pi-user"
+          styleClass="mr-2"
+          size="large"
+          shape="circle"
+        ></p-avatar>
+      </li>
+      <li class="nav-item">
+        <h6>Sebastian Aguirre</h6>
+      </li>
+      <li class="nav-item">
+        <i
+          class="pi pi-arrow-left logout"
+          style="font-size: 1.5rem"
+          (click)="logout()"
+        ></i>
+      </li>
+    </ul>
+  </div>
+</nav>
