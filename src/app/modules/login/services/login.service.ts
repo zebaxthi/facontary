@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
+import jwtDecode from 'jwt-decode';
 import { map } from 'rxjs';
 import { environment } from '../../../../environments/environment';
 
@@ -36,5 +37,15 @@ export class LoginService {
     this.headers = this.headers.append('Content-Type', 'application/json; charset=utf-8');
     this.headers = this.headers.append('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, HEAD');
     this.headers = this.headers.append("Accept", "application/json;charset=utf-8");
+  }
+
+  setTokenLocalStorage(token: string){
+    localStorage.setItem("token", token);
+  }
+
+  getDataUser(){
+    let token: any = localStorage.getItem('token') == null ? null : localStorage.getItem('token');
+    let userData: any = token == null ? null : jwtDecode(token);
+    return userData;
   }
 }

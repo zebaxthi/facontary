@@ -28,9 +28,9 @@ export class LoginComponent implements OnInit {
           this.messageService.add({key: 'bc', severity:'error', summary:'Error', detail:'El usuario o la contraseña son incorrectos'});
         }, 1000);
       } else{
-        localStorage.setItem("token", res.data.token);
-        let token: any = jwtDecode(res.data.token);
-        this.messageService.add({key: 'bc', severity:'success', summary:'Bienvenido/a', detail: token.nickname});
+        this.loginService.setTokenLocalStorage(res.data.token);
+        let dataUser: any = this.loginService.getDataUser();
+        this.messageService.add({key: 'bc', severity:'success', summary:'Bienvenido/a', detail: dataUser.nickname});
         setTimeout(() =>{
           this.router.navigate(['home']);
         }, 1000);
