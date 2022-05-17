@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavbarLeftComponent } from './navbar-left.component';
 import {SidebarModule} from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
+import {PanelMenuModule} from 'primeng/panelmenu';
 
 
 
@@ -11,7 +12,8 @@ import { ButtonModule } from 'primeng/button';
   imports: [
     CommonModule,
     SidebarModule,
-    ButtonModule
+    ButtonModule,
+    PanelMenuModule
   ],
   exports: [NavbarLeftComponent]
 })

@@ -3,6 +3,7 @@
     padding-right: 3rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    box-shadow: 3px 0 5px 0 rgb(33 35 39 / 15%);
 }
 
 .logout {
@@ -19,4 +20,18 @@
 
 .icon {
     margin-right: 2rem;
+}
+
+.icon:hover {
+    color: #5E81AC;
+}
+
+.navbar-right {
+    display: none;
+}
+
+@media screen and (max-width: 991.20px){
+    .navbar-right {
+        display: flex;
+    }
 }
