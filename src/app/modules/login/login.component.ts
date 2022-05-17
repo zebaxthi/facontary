@@ -22,7 +22,6 @@ export class LoginComponent implements OnInit {
   onLogin() {
     document.getElementById("button")!.hidden = true;
     const user = this.objetoUser(this.usuario, this.contrasena);
-    console.log(user);
     this.loginService.login(user).subscribe(res => {
       if(res.data.token == ''){
         setTimeout(() =>{
