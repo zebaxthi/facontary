@@ -35,6 +35,8 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['home']);
         }, 1000);
       }
+    }, error => {
+      this.messageService.add({key: 'bc', severity:'error', summary:'Error', detail:'Hubo un eror, inténtalo de nuevo'});
     });
     document.getElementById("button")!.hidden = false;
   }
