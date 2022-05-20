@@ -11,7 +11,6 @@ export class LoadingComponent implements OnInit {
 
   constructor(private loginService:LoginService) { 
     //this.cargando = false;
-    //xd
   }
 
   ngOnInit(): void {

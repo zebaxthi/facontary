@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
       } else{
         this.loginService.setTokenLocalStorage(res.data.token);
         let dataUser: any = this.loginService.getDataUser();
-        this.messageService.add({key: 'bc', severity:'success', summary:'Bienvenido/a', detail: dataUser.nickname});
+        this.messageService.add({key: 'bc', severity:'success', summary:'Bienvenido/a', detail: dataUser.nombre});
         setTimeout(() =>{
           this.router.navigate(['home']);
         }, 1000);
