@@ -45,7 +45,7 @@ export class LoginService {
 
   getDataUser(){
     let token: any = localStorage.getItem('token') == null ? null : localStorage.getItem('token');
-    let userData: any = token == null ? null : jwtDecode(token);
+    let userData: any = token == null || token.length < 35? null : jwtDecode(token);
     return userData;
   }
 }
