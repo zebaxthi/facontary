@@ -24,7 +24,7 @@ export class LoginService {
       {
         headers: this.headers,
         responseType: 'text',
-        //params: { code: 'kp40UJeeeBLJzRAimgl75zOvY2xVpDt/N9DDiMCRl9w1DpG/jq9D1w==' },
+        params: { code: 'XknY505friDBHOmKe04EYhTeLWjevp5ylFVRG0uDcwUGAzFuWXe3gg==' },
       }
     ).pipe(map(res => JSON.parse(res)));
   }
