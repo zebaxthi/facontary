@@ -16,31 +16,34 @@ export class LoginService {
   }
 
   public login(dataUser: any){
-    this.addHeaders();
+    // this.addHeaders();
     const url = `${this.urlFacontaryFunctions}/login`;
     return this.http.post(
       url,
       dataUser,
       {
-        headers: this.headers,
         responseType: 'text',
         params: { code: 'XknY505friDBHOmKe04EYhTeLWjevp5ylFVRG0uDcwUGAzFuWXe3gg==' },
       }
     ).pipe(map(res => JSON.parse(res)));
   }
   
-  addHeaders(){
-    this.headers = new HttpHeaders();
-    this.headers = this.headers.append('Access-Control-Allow-Origin', '*');
-    this.headers = this.headers.append("Access-Control-Allow-Credentials", "true");
-    this.headers = this.headers.append('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers');
-    this.headers = this.headers.append('Content-Type', 'application/json; charset=utf-8');
-    this.headers = this.headers.append('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, HEAD');
-    this.headers = this.headers.append("Accept", "application/json;charset=utf-8");
-  }
+  // addHeaders(){
+  //   this.headers = new HttpHeaders();
+  //   this.headers = this.headers.append('Access-Control-Allow-Origin', '*');
+  //   this.headers = this.headers.append("Access-Control-Allow-Credentials", "true");
+  //   this.headers = this.headers.append('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers');
+  //   this.headers = this.headers.append('Content-Type', 'application/json; charset=utf-8');
+  //   this.headers = this.headers.append('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, HEAD');
+  //   this.headers = this.headers.append("Accept", "application/json;charset=utf-8");
+  // }
 
   setTokenLocalStorage(token: string){
     localStorage.setItem("token", token);
+  }
+
+  getTokenLocalStorage(){
+    return localStorage.getItem("token");
   }
 
   getDataUser(){

@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  facontaryFunctions: 'https://facontaryfunctions.azurewebsites.net'
+  facontaryFunctions: 'https://facontaryfunctions.azurewebsites.net/api'
 };

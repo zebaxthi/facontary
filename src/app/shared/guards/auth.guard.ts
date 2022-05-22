@@ -22,7 +22,6 @@ export class AuthGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-      debugger;
     let userData: any = this.loginService.getDataUser();
     if (!userData) {
       if(location.pathname != '/login'){
