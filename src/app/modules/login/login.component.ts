@@ -7,7 +7,7 @@ import jwtDecode from 'jwt-decode';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+  styleUrls: ['./login.component.scss'],
   providers: [MessageService]
 })
 export class LoginComponent implements OnInit {

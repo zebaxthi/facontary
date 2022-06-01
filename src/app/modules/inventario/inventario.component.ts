@@ -14,7 +14,7 @@ import { InventarioService } from './services/inventario.service';
       display: block;
   }
 `],
-  styleUrls: ['./inventario.component.css']
+  styleUrls: ['./inventario.component.scss']
 })
 export class InventarioComponent implements OnInit {
   productDialog!: boolean;

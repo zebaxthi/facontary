@@ -4,7 +4,7 @@ import { MenuItem } from 'primeng/api';
 @Component({
   selector: 'app-navbar-left',
   templateUrl: './navbar-left.component.html',
-  styleUrls: ['./navbar-left.component.css'],
+  styleUrls: ['./navbar-left.component.scss'],
 })
 export class NavbarLeftComponent implements OnInit {
   display: any;

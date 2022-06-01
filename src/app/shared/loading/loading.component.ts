@@ -4,7 +4,7 @@ import { LoginService } from '../../modules/login/services/login.service';
 @Component({
   selector: 'app-loading',
   templateUrl: './loading.component.html',
-  styleUrls: ['./loading.component.css']
+  styleUrls: ['./loading.component.scss']
 })
 export class LoadingComponent implements OnInit {
   @Input() cargando: any;
