@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  isHomeActived: boolean = true;
+
+  constructor() { 
+  }
 
   ngOnInit(): void {
+    location.pathname == '/home' ? this.isHomeActived = true : this.isHomeActived = false;
   }
 
 }

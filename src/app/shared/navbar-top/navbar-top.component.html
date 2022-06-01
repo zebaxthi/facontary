@@ -1,37 +1,17 @@
-<p-sidebar [(visible)]="display" position="right" [baseZIndex]="10000" appendTo="body" [dismissible]="true" [showCloseIcon]="false">
+<p-sidebar [(visible)]="display" position="right" [baseZIndex]="10000" appendTo="body" [dismissible]="true" [showCloseIcon]="false" [style]="{width:'16rem'}">
   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-    <li class="nav-item">
-      <p-avatar
-        icon="pi pi-user"
-        styleClass="mr-2"
-        size="large"
-        shape="circle"
-      ></p-avatar>
+    <li class=".nav-item-sidebar">
+      <p-avatar icon="pi pi-user" styleClass="mr-2" size="large" shape="circle"></p-avatar>
     </li>
-    <li class="nav-item">
+    <li class=".nav-item-sidebar">
       <h6>{{nombreUser}}</h6>
     </li>
-    <li class="nav-item">
-      <i class="pi pi-calendar icon" style="font-size: 1.5rem"></i>
-    </li>
-    <li class="nav-item">
-      <i class="pi pi-inbox icon" style="font-size: 1.5rem"></i>
-    </li>
-    <li class="nav-item">
-      <i class="pi pi-bell icon" style="font-size: 1.5rem"></i>
-    </li>
-    <li class="nav-item">
-      <i
-        class="pi pi-arrow-left icon"
-        style="font-size: 1.5rem"
-        (click)="logout()"
-      ></i>
-    </li>
+    <p-panelMenu styleClass="menucus" [model]="items" [style]="{'width':'225px'}"></p-panelMenu>
   </ul>
 </p-sidebar>
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand">
+    <a class="navbar-brand" href="/home">
       Facontary
     </a>
     <i
@@ -43,31 +23,19 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item">
-        <i class="pi pi-calendar icon" style="font-size: 1.5rem"></i>
-      </li>
-      <li class="nav-item">
         <i class="pi pi-inbox icon" style="font-size: 1.5rem"></i>
       </li>
       <li class="nav-item">
         <i class="pi pi-bell icon" style="font-size: 1.5rem"></i>
       </li>
       <li class="nav-item">
-        <p-avatar
-          icon="pi pi-user"
-          styleClass="mr-2"
-          size="large"
-          shape="circle"
-        ></p-avatar>
+        <p-avatar icon="pi pi-user" styleClass="mr-2" size="large" shape="circle"></p-avatar>
       </li>
       <li class="nav-item">
         <h6>{{nombreUser}}</h6>
       </li>
       <li class="nav-item">
-        <i
-          class="pi pi-arrow-left logout"
-          style="font-size: 1.5rem"
-          (click)="logout()"
-        ></i>
+        <i class="pi pi-sign-out logout" style="font-size: 1.5rem" (click)="logout()"></i>
       </li>
     </ul>
   </div>

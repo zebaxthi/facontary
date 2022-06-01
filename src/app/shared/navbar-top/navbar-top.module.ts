@@ -1,8 +1,9 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarTopComponent } from './navbar-top.component';
 import {AvatarModule} from 'primeng/avatar';
 import { SidebarModule } from 'primeng/sidebar';
+import { PanelMenuModule } from 'primeng/panelmenu';
 
 
 
@@ -11,8 +12,10 @@ import { SidebarModule } from 'primeng/sidebar';
   imports: [
     CommonModule,
     AvatarModule,
-    SidebarModule
+    SidebarModule,
+    PanelMenuModule
   ],
   exports: [NavbarTopComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class NavbarTopModule { }

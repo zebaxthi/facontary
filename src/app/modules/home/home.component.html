@@ -1,2 +1,6 @@
 <app-navbar-top></app-navbar-top>
 <app-navbar-left></app-navbar-left>
+<div class="container">
+    <app-welcome *ngIf="isHomeActived == true"></app-welcome>
+    <router-outlet></router-outlet>
+</div>

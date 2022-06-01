@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
         }, 1000);
       }
     }, error => {
-      this.messageService.add({key: 'bc', severity:'error', summary:'Error', detail:'Hubo un eror, inténtalo de nuevo'});
+      this.messageService.add({key: 'bc', severity:'error', summary:'Error', detail:'Hubo un error, inténtalo de nuevo'});
     });
     document.getElementById("button")!.hidden = false;
   }

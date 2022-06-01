@@ -6,6 +6,13 @@
     box-shadow: 3px 0 5px 0 rgb(33 35 39 / 15%);
 }
 
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 2px rgb(33 35 39 / 15%);
+}
+
 .logout {
     margin-left: 2rem;
 }

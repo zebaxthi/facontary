@@ -16,19 +16,18 @@ export class NavbarLeftComponent implements OnInit {
     this.items = [
       {
         label: 'Dashboard',
-        icon: 'pi pi-fw pi-home',
+        icon: 'pi pi-fw pi-chart-bar',
+        command:()=>{location.replace('/dashboard');}
       },
       {
-        label: 'Vender',
+        label: 'POS',
         icon: 'pi pi-fw pi-shopping-cart',
+        command:()=>{location.replace('/pos-facturarion');}
       },
       {
         label: 'Inventario',
         icon: 'pi pi-fw pi-file',
-      },
-      {
-        label: 'Events',
-        icon: 'pi pi-fw pi-calendar',
+        command:()=>{location.replace('/inventario');}
       },
     ];
   }

@@ -13,7 +13,8 @@ import {PanelMenuModule} from 'primeng/panelmenu';
     CommonModule,
     SidebarModule,
     ButtonModule,
-    PanelMenuModule
+    PanelMenuModule,
+    SidebarModule
   ],
   exports: [NavbarLeftComponent]
 })
